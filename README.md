@@ -1,7 +1,7 @@
 # heroku-vless
 Deploy VLESS server to heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/Dimitri2020007/heroku-vless.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/guigeng/heroku-vless.git)
 
 # VLESS Client Setup
 
@@ -58,7 +58,7 @@ addEventListener(
         }
         
         let url=new URL(event.request.url);
-        url.hostname="appname.herokuapp.com";
+        url.hostname=host;
         let request=new Request(url,event.request);
         event. respondWith(
             fetch(request)

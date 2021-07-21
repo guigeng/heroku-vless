@@ -19,16 +19,13 @@ cat << EOF > /usr/local/etc/xray/config.json
     },
     "inbounds": [
         {   
-            "listen": "127.0.0.1",
-            "port": 8180,
+            "listen": "/dev/shm/vless.sock",
             "protocol": "vless",
             "settings": {
                 "clients": [
                     {
                         "id": "$ID",
-                        "flow": "xtls-rprx-direct",
-                        "level": 0,
-                        "email": "love@v2fly.org"
+                        "email": "hello@world"
                     }
                 ],
                 "decryption": "none"
@@ -37,7 +34,7 @@ cat << EOF > /usr/local/etc/xray/config.json
                 "network": "ws",
                 "security": "none",
                 "wsSettings": {
-                  "path": "/$ID-vless?ed=2048"
+                    "path": "/$ID-vless?ed=2048"
                 }
             }
         }
